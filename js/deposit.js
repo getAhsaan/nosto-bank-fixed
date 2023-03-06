@@ -7,7 +7,7 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
     */
   const newDepositAmount = document.getElementById("deposit-field").value;
   if (newDepositAmount === '') {
-    alert('ddd')
+    alert('Please input an amount')
     return;
   }
   document.getElementById("deposit-field").value = '';
