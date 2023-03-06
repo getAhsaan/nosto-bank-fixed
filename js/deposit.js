@@ -19,12 +19,12 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
 
   // calculate new deposit total
   const newDepositTotal = parseFloat(previousDepositTotal) + parseFloat(newDepositAmount);
-  console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
+  // console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
   // set deposit total value
   document.getElementById("deposit-total").innerText = newDepositTotal;
 
   // get previous balance by using the function
   const previousBalanceTotal = document.getElementById("balance-total").innerText;
-  const newBalanceTotal = previousBalanceTotal + newDepositAmount;
-  setTextElementValueById("balance-total", newBalanceTotal);
+  const newBalanceTotal = parseFloat(previousBalanceTotal) + parseFloat(newDepositAmount);
+  document.getElementById("balance-total").innerText = newBalanceTotal;
 });
